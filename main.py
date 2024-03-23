@@ -18,7 +18,7 @@ st.markdown("**Mahmood Shaker Abdulhadi**")
 st.markdown("> Mahmood Shaker Abdulhadi")
 st.markdown("`Code Markdown`")
 st.markdown("[Facebook Login](https://www.facebook.com/)")
-st.image("C:\Users\mahmood\PycharmProjects\fav.JPG",width=300)
+st.image("fav.JPG",width=300)
 st.image('https://www.opensourceforu.com/wp-content/uploads/2021/04/Mobile-ui-design_OSFY-April-2021.jpg', caption='Your Image Caption', width=444)
 st.markdown("---")
 code="""print("Hello World")"""
