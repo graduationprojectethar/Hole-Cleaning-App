@@ -1,17 +1,19 @@
 import streamlit as st
-import plotly.graph_objs as go
-import numpy as np
+import pandas as pd
 
-# Generate some random data for the plot
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
+def main():
+    # Sample data for the table (list of dictionaries)
+    data = [
+        {"Name": "John", "Age": 30, "Country": "USA"},
+        {"Name": "Alice", "Age": 25, "Country": "UK"},
+        {"Name": "Bob", "Age": 35, "Country": "Canada"}
+    ]
 
-# Create a plotly figure
-fig = go.Figure(data=go.Scatter(x=x, y=y, mode='lines', name='sin(x)'))
+    # Convert data to a pandas DataFrame
+    df = pd.DataFrame(data)
 
-# Set plot title and axis labels
-fig.update_layout(title='Plotly Line Plot', xaxis_title='x', yaxis_title='sin(x)')
+    # Display the DataFrame as a table
+    st.write(df)
 
-# Render the plot using st.plotly_chart
-st.plotly_chart(fig)
-
+if __name__ == "__main__":
+    main()
