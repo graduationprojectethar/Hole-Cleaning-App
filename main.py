@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-# table=pd.DataFrame({"column 1":[1,2,3,4],"column 2":[1,2,3,4]})
+table=pd.DataFrame({"column 1":[1,2,3,4],"column 2":[1,2,3,4]})
 hide_all = """
 <style> 
 #MainMenu {visibility: hidden;}
@@ -38,7 +38,7 @@ st.metric(label="Current Value", value=current_value, delta=f"{delta} (+{delta_p
 st.markdown("---")
 st.table(table)
 st.dataframe(table)
---------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
 state=st.checkbox("checkbox",value=True)
 if state:
     st.write("Done")
