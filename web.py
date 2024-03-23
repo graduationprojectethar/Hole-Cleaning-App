@@ -1,8 +1,8 @@
-# import streamlit as st
-# import numpy as np
-# import pandas as pd
-# import matplotlib.pyplot as plt
-# import mysql.connector
+import streamlit as st
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import mysql.connector
 
 mydb = mysql.connector.connect(host='localhost', user='root', password='Mn12312344$', port='3306', database='Mydb')
 mycursor = mydb.cursor()
