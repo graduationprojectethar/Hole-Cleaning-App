@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import mysql.connector
 
 mydb = mysql.connector.connect(host='localhost', user='root', password='Mn12312344$', port='3306', database='Mydb')
@@ -32,7 +32,7 @@ for j in data:
     Enhanced_TR = np.append(Enhanced_TR , sixth_column)
 
 # Create a figure and a subplot with 1 row and 2 columns
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(5, 10))
+# fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(5, 10))
 
 # Plot depth & Q on the first subplot
 ax1.plot(Optimal_Q_gpm, MD_m, c='#00f', alpha=0.35)
@@ -60,7 +60,7 @@ ax2.grid(True, which='both', alpha=0.7, linestyle=':', lw=0.5)
 ax2.minorticks_on()
 ax2.grid(True, which='minor', alpha=0.7, linestyle=':', lw=0.5)
 # Adjust layout to prevent clipping of labels
-plt.tight_layout()
+# plt.tight_layout()
 st.pyplot(fig)
 
 # present the table
