@@ -1,16 +1,23 @@
+import streamlit as st
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Data
-x = [1, 2, 3, 4, 5]
-y = [2, 3, 5, 7, 11]
+def main():
+    st.title('Matplotlib Example in Streamlit')
 
-# Create a plot
-plt.plot(x, y, marker='o', linestyle='-')
+    # Generate some sample data
+    x = np.linspace(0, 10, 100)
+    y = np.sin(x)
 
-# Add labels and title
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.title('Example Plot')
+    # Create a plot
+    fig, ax = plt.subplots()
+    ax.plot(x, y)
+    ax.set_xlabel('X-axis')
+    ax.set_ylabel('Y-axis')
+    ax.set_title('Sine Wave Plot')
 
-# Show plot
-plt.show()
+    # Display the plot using Streamlit
+    st.pyplot(fig)
+
+if __name__ == "__main__":
+    main()
