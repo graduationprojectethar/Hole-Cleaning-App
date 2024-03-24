@@ -1,19 +1,16 @@
-import streamlit as st
-import pandas as pd
+import matplotlib.pyplot as plt
 
-def main():
-    # Sample data for the table (list of dictionaries)
-    data = [
-        {"Name": "John", "Age": 30, "Country": "USA"},
-        {"Name": "Alice", "Age": 25, "Country": "UK"},
-        {"Name": "Bob", "Age": 35, "Country": "Canada"}
-    ]
+# Data
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
 
-    # Convert data to a pandas DataFrame
-    df = pd.DataFrame(data)
+# Create a plot
+plt.plot(x, y, marker='o', linestyle='-')
 
-    # Display the DataFrame as a table
-    st.write(df)
+# Add labels and title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Example Plot')
 
-if __name__ == "__main__":
-    main()
+# Show plot
+plt.show()
