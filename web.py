@@ -5,6 +5,18 @@ import matplotlib.pyplot as plt
 # import mysql.connector
 import sqlite3
 
+# Hide Streamlit icons
+st.markdown("""
+    <style>
+        #MainMenu {
+            visibility: hidden;
+        }
+        footer {
+            visibility: hidden;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
 # mydb = mysql.connector.connect(host='localhost', user='root', password='Mn12312344$', port='3306', database='Mydb')
 mydb = sqlite3.connect('information.db')
 mycursor = mydb.cursor()
